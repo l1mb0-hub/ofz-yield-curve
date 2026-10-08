@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ofz"]
+
+[project]
+name = "ofz-yield-curve"
+version = "1.0.0"
+description = "Кривая доходности ОФЗ (Нельсон-Сигель) и риск портфеля облигаций на данных Мосбиржи"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pandas>=2.0", "scipy>=1.10", "matplotlib>=3.7", "requests>=2.28"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
